@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetChat AI - Your Pet Expert Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">❤️</div>
+                    <div class="logo-text">
+                        <h1>PetChat AI</h1>
+                        <p>Your friendly pet expert assistant</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-wrapper">
+                <!-- Messages Area -->
+                <div class="messages-area" id="messagesArea">
+                    <div class="message assistant-message">
+                        <div class="message-avatar assistant-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                Hello! I'm your pet expert assistant. Ask me anything about cats and dogs - from care
+                                tips to behavior questions!
+                            </div>
+                            <div class="message-time" id="initialTime"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <form class="input-form" id="chatForm">
+                        <input type="text" id="messageInput"
+                            placeholder="Ask me about cats, dogs, pet care, behavior..." autocomplete="off" disabled>
+                        <button type="submit" id="sendButton" disabled>
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </form>
+                    <p class="input-help">Ask about pet care, training, health, behavior, and more!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
