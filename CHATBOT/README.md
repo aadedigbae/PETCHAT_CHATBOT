@@ -11,11 +11,11 @@ PetChat is an intelligent chatbot designed to provide instant, reliable answers 
 
 ---
 
-## 🌟 Why Pet Care as a Domain?
+## Why Pet Care as a Domain?
 
 Pet ownership is at an all-time high, but access to trustworthy, actionable pet care advice remains a challenge. Misinformation, conflicting sources, and the lack of instant expert support can lead to poor decisions affecting pet health and well-being.
 
-**PetChat bridges this gap by providing:**
+** PetChat bridges this gap by providing:**
 - **24/7 Expert Guidance:** Reliable answers to common and complex pet care questions.
 - **Domain-Specific Intelligence:** Focused on dogs and cats, with responses grounded in veterinary best practices.
 - **Personalized Support:** Tailored advice for nutrition, health, training, and behavior.
@@ -23,7 +23,7 @@ Pet ownership is at an all-time high, but access to trustworthy, actionable pet 
 
 ---
 
-## 🗂️ Dataset Collection & Preprocessing
+## Dataset Collection & Preprocessing
 
 ### Dataset Overview
 - **Source:** Kaggle “Dog-Cat-QA.csv” (570+ Q&A pairs)
@@ -47,7 +47,7 @@ Pet ownership is at an all-time high, but access to trustworthy, actionable pet 
 
 ---
 
-## 🧠 Model Architecture & Fine-Tuning
+## Model Architecture & Fine-Tuning
 
 ### Model Selection
 - **Base Model:** `google/flan-t5-base` (Generative QA, encoder-decoder)
@@ -70,7 +70,7 @@ Pet ownership is at an all-time high, but access to trustworthy, actionable pet 
 
 ---
 
-## 📊 Performance Metrics & Evaluation
+## Performance Metrics & Evaluation
 
 ### Quantitative Metrics
 - **BLEU Score:** 0.32 (baseline), up to 0.35 (tuned)
@@ -91,7 +91,7 @@ Pet ownership is at an all-time high, but access to trustworthy, actionable pet 
 
 ---
 
-## 💻 User Interface & Deployment
+## User Interface & Deployment
 
 ### Web App Features
 - **Framework:** Flask (Python)
@@ -123,7 +123,7 @@ http://localhost:5000
 
 ---
 
-## 📝 Code Quality & Documentation
+## Code Quality & Documentation
 
 - **Notebook:** Fully documented Jupyter Notebook covering data cleaning, preprocessing, model training, evaluation, and sample interactions.
 - **Code:** Clean, modular, and commented for clarity.
@@ -132,7 +132,7 @@ http://localhost:5000
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 PetChat-Domain-Chatbot/ ├── data/ │ └── Dog-Cat-QA.csv ├── cleaned_pet_qa.csv ├── pettychat_model/ # Saved model and tokenizer ├── app.py # Flask backend ├── templates/ │ └── index.html # Web UI ├── PetChat.ipynb # Jupyter Notebook (main workflow) ├── requirements.txt └── README.md
 
 
@@ -140,7 +140,7 @@ PetChat-Domain-Chatbot/ ├── data/ │ └── Dog-Cat-QA.csv ├── c
 
 ---
 
-## 📈 Results & Insights
+## Results & Insights
 
 - **Significant improvement** in BLEU and F1 scores after hyperparameter tuning.
 - **No overfitting** observed due to early stopping and validation monitoring.
@@ -149,7 +149,7 @@ PetChat-Domain-Chatbot/ ├── data/ │ └── Dog-Cat-QA.csv ├── c
 
 ---
 
-## 🗨️ Example Conversations
+## Example Conversations
 
 **User:** What should I feed a 2-month-old puppy?  
 **PetChat:** At 2 months, puppies should eat high-quality puppy food formulated for their age and breed. Feed small, frequent meals and provide fresh water at all times.
@@ -162,16 +162,7 @@ PetChat-Domain-Chatbot/ ├── data/ │ └── Dog-Cat-QA.csv ├── c
 
 ---
 
-## 🚀 Future Work
-
-- Expand dataset to include more pet species and rare conditions.
-- Integrate with voice assistants for hands-free Q&A.
-- Add user feedback and learning analytics to improve responses.
-- Deploy on cloud for global accessibility.
-
----
-
-## 📚 References
+## References
 
 - [Kaggle Dog-Cat-QA Dataset](https://www.kaggle.com/datasets)
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
@@ -180,16 +171,7 @@ PetChat-Domain-Chatbot/ ├── data/ │ └── Dog-Cat-QA.csv ├── c
 
 ---
 
-## 📬 Contact
-
-For questions, feedback, or collaboration, please contact [your.email@domain.com](mailto:your.email@domain.com).
-
----
-
-## 🏆 Mission
+## Mission
 
 *PetChat was developed as part of a domain-specific NLP project to make expert pet care advice accessible, accurate, and engaging for all pet owners.*
 
----
-
-[View the full code and notebook on GitHub](https://github.com/yourusername/PetChat-Domain-Chatbot)
