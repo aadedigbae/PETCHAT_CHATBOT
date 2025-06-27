@@ -1,6 +1,6 @@
 venv/
 # Ignore model and weight files
-*.h5
+#*.h5
 *.pb
 *.index
 *.data-*

@@ -6,7 +6,7 @@ import os
 app = Flask(__name__, static_folder='.')
 
 # Load model and tokenizer
-MODEL_PATH = "pettychat_model"
+MODEL_PATH = "petchat_model"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = TFAutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
 
