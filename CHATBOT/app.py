@@ -23,7 +23,7 @@ def chat():
 # Serve static files (index.html, script.js, style.css)
 @app.route('/')
 def serve_index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('.', 'templates/index.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
