@@ -64,23 +64,26 @@ FLAN-T5 is a powerful generative model capable of producing natural, context-awa
 
 - **Batch Size:** 2 (optimized for local memory)
 - **Learning Rate:** 5e-5
-- **Epochs:** 15 (with early stopping)
+- **Epochs:** 11 (with early stopping)
 - **Optimizer:** Adam
 - **Early Stopping:** Monitors validation loss, restores best weights
 
 **Training Pipeline:**
 - Inputs formatted as `"question: <normalized question>"`
 - Outputs as `<normalized answer>`
-- Tokenized with max_length=128 for both input and output
+- Tokenized with `max_length=64` for input and `max_length=128` for output
 - Model checkpointing and early stopping to prevent overfitting
 
 ### 3.3 Hyperparameter Tuning
 
-| Experiment | Model           | Batch Size | LR     | Epochs | Best Val Loss | BLEU | F1   | Notes                |
-|------------|-----------------|-----------|--------|--------|--------------|------|------|----------------------|
-| 1          | flan-t5-base    | 2         | 5e-5   | 15     | 2.10         | 0.32 | 0.41 | Baseline             |
-| 2          | flan-t5-base    | 4         | 3e-5   | 20     | 1.98         | 0.35 | 0.44 | Lower LR, larger BS  |
-| 3          | flan-t5-small   | 4         | 5e-5   | 15     | 2.25         | 0.28 | 0.39 | Smaller model        |
+| Experiment | Model        | Batch Size | LR    | Epochs | Best Val Loss | BLEU  | F1    | Notes                        |
+|------------|--------------|-----------|-------|--------|---------------|-------|-------|------------------------------|
+| Exp 1          | flan-t5-small | 2         | 3e-4  | 5      | 3.12          | 0.030 | 0.045 | Initial baseline             |
+| Exp 2          | flan-t5-base | 2         | 1e-4  | 7      | 2.85          | 0.042 | 0.061 | Lower LR, more epochs        |
+| Exp 3          | flan-t5-base | 4         | 1e-4  | 7      | 2.60          | 0.055 | 0.078 | Increased batch size         |
+| Exp 4          | flan-t5-base | 4         | 5e-5  | 9      | 2.35          | 0.066 | 0.095 | Lower LR, more epochs        |
+| Exp 5          | flan-t5-base | 2         | 5e-5  | 9      | 2.20          | 0.073 | 0.110 | Reduced batch, tuned epochs  |
+| Exp 6          | flan-t5-base | 2         | 5e-5  | 11     | 2.08          | 0.081 | 0.122 | Final/best (early stopping)  |
 
 **Generation Parameters:**  
 - `num_beams=4`, `repetition_penalty=2.0`, `no_repeat_ngram_size=3`, `temperature=1.2`, `top_p=0.95`  
@@ -97,10 +100,10 @@ These settings reduce repetitive answers and improve response diversity.
 
 ### 4.1 Quantitative Metrics
 
-- **BLEU Score:** 0.32 (baseline), up to 0.35 (tuned)
-- **F1 Score:** 0.41 (baseline), up to 0.44 (tuned)
-- **Perplexity:** Calculated using both TensorFlow and PyTorch models for reference
-- **Validation Loss:** 2.10 → 1.98 (improved with tuning)
+- **BLEU Score:** 0.081
+- **F1 Score:** 0.122
+- **Perplexity:** 10.750
+- **Validation Loss:** 2.08
 
 ### Training & Validation Loss Curves
 
@@ -185,6 +188,8 @@ PetChat-Domain-Chatbot/
 ├── templates/
 │   └── index.html           # Web UI
 ├── static/                  # CSS/JS assets
+│   ├── script.js
+│   └── style.css                  
 ├── PetChat.ipynb            # Jupyter Notebook (main workflow)
 ├── requirements.txt
 └── README.md
@@ -233,7 +238,16 @@ PetChat-Domain-Chatbot/
 
 ---
 
-## 11. Appendices
+## 11. Limitations & Future Work
+
+- The model is trained on a relatively small dataset (~570 Q&A pairs); more data could further improve performance.
+- Multi-turn dialogue and conversational memory are not yet supported.
+- Future work: expand dataset, add multi-turn support, deploy on cloud for public access.
+- Deploy on Render
+
+---
+
+## 12. Appendices
 
 ### Appendix A: Code Repository
 
