@@ -88,7 +88,7 @@ These settings reduce repetitive answers and improve response diversity.
 
 ### Model Evaluation Metrics
 
-![Evaluation Metrics](CHATBOT/images/model_evaluation.png)
+![Evaluation Metrics](images/model_evaluation.png)
 
 
 ---
@@ -104,8 +104,8 @@ These settings reduce repetitive answers and improve response diversity.
 
 ### Training & Validation Loss Curves
 
-![Training and Validation Loss](CHATBOT/images/training_and_validation_loss.png)
-![Tensorflow Peplexity](CHATBOT/images/perplexity.png)
+![Training and Validation Loss](images/training_and_validation_loss.png)
+![Tensorflow Peplexity](images/perplexity.png)
 
 ### 4.2 Qualitative Testing
 
@@ -159,9 +159,9 @@ Politely rejects or redirects irrelevant queries
 
 ### 5.3 Screenshot from ChatBot
 
-![Image 1](CHATBOT/images/default.png)
-![Image 2](CHATBOT/images/image1.png)
-![Image 3](CHATBOT/images/image2.png)
+![Image 1](images/default.png)
+![Image 2](images/image1.png)
+![Image 3](images/image2.png)
 
 ### 5.4 Demo Video
 
@@ -214,7 +214,7 @@ PetChat-Domain-Chatbot/
 
 ### Input and Target Length Distributions
 
-![Input and Target Lengths](CHATBOT/images/Distribution_Input_Target.png)
+![Input and Target Lengths](images/Distribution_Input_Target.png)
 
 ---
 
