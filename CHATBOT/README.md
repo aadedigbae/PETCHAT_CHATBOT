@@ -86,6 +86,11 @@ FLAN-T5 is a powerful generative model capable of producing natural, context-awa
 - `num_beams=4`, `repetition_penalty=2.0`, `no_repeat_ngram_size=3`, `temperature=1.2`, `top_p=0.95`  
 These settings reduce repetitive answers and improve response diversity.
 
+### Model Evaluation Metrics
+
+![Evaluation Metrics](CHATBOT/images/model_evaluation.png)
+
+
 ---
 
 ## 4. Performance Evaluation
@@ -96,6 +101,11 @@ These settings reduce repetitive answers and improve response diversity.
 - **F1 Score:** 0.41 (baseline), up to 0.44 (tuned)
 - **Perplexity:** Calculated using both TensorFlow and PyTorch models for reference
 - **Validation Loss:** 2.10 → 1.98 (improved with tuning)
+
+### Training & Validation Loss Curves
+
+![Training and Validation Loss](CHATBOT/images/training_and_validation_loss.png)
+![Tensorflow Peplexity](CHATBOT/images/perplexity.png)
 
 ### 4.2 Qualitative Testing
 
@@ -147,9 +157,15 @@ Politely rejects or redirects irrelevant queries
     http://localhost:5000
     ```
 
-### 5.3 Demo Video
+### 5.3 Screenshot from ChatBot
 
-[![Watch the Demo Video](https://drive.google.com/drive/folders/1iQss2Zp--QzHxGidopp6stTOpMOD-g_y?usp=sharing)](https://drive.google.com/drive/folders/1iQss2Zp--QzHxGidopp6stTOpMOD-g_y?usp=sharing)
+![Image 1](CHATBOT/images/default.png)
+![Image 2](CHATBOT/images/image1.png)
+![Image 3](CHATBOT/images/image2.png)
+
+### 5.4 Demo Video
+
+[![Watch the Demo Video](https://drive.google.com/drive/folders/1iQss2Zp--QzHxGidopp6stTOpMOD-g_y?usp=sharing)]
 
 ---
 
@@ -195,6 +211,10 @@ PetChat-Domain-Chatbot/
 
 **User:** What is the capital of France?  
 **PetChat:** I'm here to help with pet care questions. Please ask me about dogs or cats!
+
+### Input and Target Length Distributions
+
+![Input and Target Lengths](CHATBOT/images/Distribution_Input_Target.png)
 
 ---
 
